@@ -27,6 +27,94 @@
 		font-weight: bold;
 	}
 
+      .placeholder {
+
+        background-color: lightgrey;
+
+        border: 2px solid rgb(50,50,100);
+
+      }
+
+
+
+      #name {
+
+        background-color: lightgrey;
+
+        border-radius-color: black;
+
+        border: 3px solid black;
+
+      }
+
+
+
+      #nav {
+
+        border-bottom: 3px solid lightgrey;
+
+        color: lightgrey;
+
+      }
+
+      .Welcome {
+
+        color: Red;
+
+      }
+
+      .hello{
+
+        font-weight: 500;
+
+      }
+
+      .table{
+
+        border: 3px solid blue;
+
+        margin-left: 25px;
+
+        margin-right: 25px;
+
+      }
+
+      tfoot{
+
+        background-color: dimgray;
+
+        color: white;
+
+        font-size: small;
+
+    }
+
+
+
+    tbody tr:hover{
+
+        background-color: lightblue;
+
+    }
+
+    .data {
+
+      color: lightblue;
+
+    }
+
+.form1 {
+
+  margin-left: 20px;
+
+}
+
+.form3 {
+
+  margin-left: 20px;
+
+}
+
 
 th[role=columnheader]:not(.no-sort) {
 
