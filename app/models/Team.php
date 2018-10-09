@@ -9,6 +9,19 @@ class Team
     $this->name = $data['name'];
     $this->hourly_rate = floatval($data['hourly_rate']);
   }
+
+  public function create() {
+    $db = new PDO(DB_SERVER, DB_USER, DB_PW);
+    $sql = 'INSERT INTO Work (name, hourly_rate)
+            VALUES (?,?)';
+    $statement = $db->prepare($sql);
+    $success = $statement->execute([
+      $this->name,
+      $this->hourly_rate
+    ]);
+    $this->id = $db->lastInsertId();
+  }
+
   public static function fetchAll() {
     // 1. Connect to the database
     $db = new PDO(DB_SERVER, DB_USER, DB_PW);
