@@ -6,4 +6,4 @@ $teams = Team::fetchAll();
 $json = json_encode($teams, JSON_PRETTY_PRINT);
 // 3. Print
 header('Content-Type: application/json');
-echo $json
+echo $json ;
