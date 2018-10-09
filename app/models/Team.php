@@ -19,7 +19,7 @@ class Team
       $this->name,
       $this->hourly_rate
     ]);
-    $this->id = $db->lastInsertId();
+    $this->id = $db->lastInsertid();
   }
 
   public static function fetchAll() {
