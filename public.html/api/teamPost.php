@@ -1,4 +1,4 @@
 <?php
-$work = new Team($_POST);
-$work->create();
-echo json_encode($teams);
+$team = new Team($_POST);
+$team->create();
+echo json_encode($team);
