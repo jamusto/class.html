@@ -1,6 +1,6 @@
 <?php
 
-reuire '../../app/common.php';
+require '../../app/common.php';
 $projectId < 1) {
   throw new Exception ('Invalid Project ID in URL');
 }
