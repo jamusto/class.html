@@ -1,7 +1,7 @@
 <?php
 
 require '../../app/common.php';
-$projectId < 1) {
+($projectId < 1) {
   throw new Exception ('Invalid Project ID in URL');
 }
 
