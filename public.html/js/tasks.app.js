@@ -47,7 +47,6 @@ var tasksApp = new Vue({
              .diff(moment(this.workForm.start + ' ' + this.workForm.start_time), 'hours', true)
 
              .toFixed(1);
-
     }
 
   },
@@ -55,8 +54,6 @@ var tasksApp = new Vue({
   methods: {
 
     handleWorkForm(e) {
-
-
 
       // TODO: Check validity in a better way
 
@@ -68,8 +65,6 @@ var tasksApp = new Vue({
 
       }
 
-
-
       this.workForm.start_date = this.workForm.start + ' ' + this.workForm.start_time;
 
       this.workForm.hours = this.workSpan;
@@ -77,17 +72,8 @@ var tasksApp = new Vue({
       // Stop field not used by the API
 
       // this.workForm.stop_date = this.workForm.stop + ' ' + this.workForm.stop_time;
-
-
-
       const s = JSON.stringify(this.workForm);
-
-
-
       console.log(s);
-
-
-
       // POST to remote server
 
       fetch('api/work.php', {
@@ -115,13 +101,9 @@ var tasksApp = new Vue({
         console.error(err);
 
       })
-
-
-
       // Reset workForm
 
       this.workForm = this.getEmptyWorkForm();
-
     },
 
     sumHours() {
@@ -167,9 +149,6 @@ var tasksApp = new Vue({
   },
 
   created () {
-
-
-
     // Do data fetch
 
     const url = new URL(window.location.href);
@@ -180,8 +159,6 @@ var tasksApp = new Vue({
 
     this.task.id = taskId;
 
-
-
     if (!taskId) {
 
       //TODO: Error? 404?
@@ -189,15 +166,9 @@ var tasksApp = new Vue({
       //e.g., window.location = '404.html';
 
     }
-
-
-
     // Populate workForm with default values
 
     this.workForm = this.getEmptyWorkForm();
-
-
-
     // TODO: Fetch task-specific data
 
     // fetch('api/task?id=4')
@@ -215,9 +186,6 @@ var tasksApp = new Vue({
       console.error(err);
 
     })
-
-
-
     // Fetch all teams, for the form
 
     fetch('api/team.php')
